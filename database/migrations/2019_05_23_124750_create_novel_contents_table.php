@@ -1,0 +1,44 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateNovelContentsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('novel_contents', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('user_id');
+            $table->integer('novel_id');
+            $table->integer('chapter_id')->comment('对应文章的章节id');
+            $table->string('title')->comment('标题');
+            $table->string('slug')->comment('slug');
+            $table->integer('view_num')->default(0)->comment('观看次数');
+            $table->string('short_description')->default('')->comment('简短介绍');
+            $table->text('content')->comment('章节的具体内容');
+            $table->string('seo_keywords')->default('')->comment('SEO关键字');
+            $table->string('seo_description')->default('')->comment('SEO描述');
+            $table->timestamp('published_at')->default(null)->nullable(true)->comment('上线时间');
+            $table->tinyInteger('is_show')->comment('1显示,-1隐藏');
+            $table->softDeletes();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('novel_contents');
+    }
+}
