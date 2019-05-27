@@ -63,18 +63,25 @@ class SmsController extends FrontendController
      */
     protected function sendHandler($mobile, $sessionKey, $templateId)
     {
-        $code = 1234;
+        $code = mt_rand(1000, 9999);
+//        $code = 1234;
         session([$sessionKey => $code]);
-//        $config = config('sms');
-//        $easySms = new EasySms($config);
-//        $data = [
-//            'content' => str_replace('#code#', $code, $config['gateways'][$config['default']['gateways'][0]]['template'][$templateId]),
-//            'template' => $config['gateways'][$config['default']['gateways'][0]]['template'][$templateId],
-//            'data' => ['code' => $code],
-//        ];
-//        $sendResponse = $easySms->send($mobile, $data);
-//        // Log
-//        SmsRecord::createData($mobile, $data, $sendResponse);
+        $config = config('sms_new');
+
+        $easySms = new EasySms($config);
+        $data = [
+//            'content'  => '您的验证码为: 6379',
+            'template' => 'SMS_24850304',
+            'data' => [
+                'verify' => $code,
+                'name' => 'name',
+                'intro' => 'intro'
+            ],
+        ];
+
+        $sendResponse = $easySms->send($mobile, $data);
+        // Log
+        SmsRecord::createData($mobile, $data, $sendResponse);
 
         return $this->success('验证码发送成功');
     }
