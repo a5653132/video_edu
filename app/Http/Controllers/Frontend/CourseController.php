@@ -27,7 +27,7 @@ class CourseController extends FrontendController
 
 
         ['title' => $title, 'keywords' => $keywords, 'description' => $description] = config('meedu.seo.course_list');
-
+       
         return v('frontend.course.index', compact('courses', 'title', 'keywords', 'description'));
     }
 

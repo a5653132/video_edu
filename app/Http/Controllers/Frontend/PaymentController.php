@@ -11,6 +11,8 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use Illuminate\Support\Facades\Log;
+
 class PaymentController extends FrontendController
 {
     /**
@@ -21,7 +23,8 @@ class PaymentController extends FrontendController
      * @return mixed
      */
     public function callback($payment)
-    {
+    {     Log::info(111111);
+
         $payments = config('meedu.payment');
         if (! isset($payments[$payment])) {
             abort(404);

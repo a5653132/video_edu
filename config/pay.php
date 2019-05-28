@@ -43,7 +43,7 @@ return [
         'mch_id' => env('WECHAT_MCH_ID', ''),
 
         // 微信支付异步通知地址
-        'notify_url' => env('WECHAT_PAY_NOTIFY_URL', 'http://demo.demo/payment/callback/wechat'),
+        'notify_url' => env('WECHAT_PAY_NOTIFY_URL', 'http://edu.yysoul.com/payment/callback/wechat'),
 
         // 微信支付签名秘钥
         'key' => env('WECHAT_KEY', ''),

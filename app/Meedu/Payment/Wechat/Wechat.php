@@ -82,7 +82,24 @@ class Wechat implements Payment
      */
     public function callback()
     {
-        $pay = Pay::wechat(config('pay.wechat'));
+          
+        $config = [
+            'mchid'=> config('payjs.mchid'),
+            'key'=>config('payjs.key')
+        ];
+        $payjs = new Payjs($config);
+
+        $data = request()->all();
+        if ($payjs->checkSign($data) === true) {
+            Log::info($data);
+            $order = Order::whereOrderId($data['out_trade_no'])->firstOrFail();
+            event(new PaymentSuccessEvent($order));
+        } else {
+//            exception_record($e);
+            return '验签失败';
+        }
+	
+	/**$pay = Pay::wechat(config('pay.wechat'));
 
         try {
             $data = $pay->verify();
@@ -95,7 +112,7 @@ class Wechat implements Payment
             exception_record($e);
         }
 
-        return $pay->success();
+        return $pay->success();*/
     }
 
     /**

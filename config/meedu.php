@@ -89,9 +89,9 @@ return [
             'description' => '',
         ],
         'course_list' => [
-            'title' => '',
-            'keywords' => '',
-            'description' => '',
+            'title' => '视频列表',
+            'keywords' => '视频列表',
+            'description' => '视频列表',
         ],
         'role_list' => [
             'title' => 'VIP',
@@ -99,9 +99,9 @@ return [
             'description' => '',
         ],
         'novel_list' => [
-            'title' => '',
-            'keywords' => '',
-            'description' => '',
+            'title' => '文章列表',
+            'keywords' => '文章列表',
+            'description' => '文章列表',
         ],
     ],
 
