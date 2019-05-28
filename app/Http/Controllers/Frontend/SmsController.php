@@ -15,6 +15,7 @@ use Exception;
 use App\Models\SmsRecord;
 use Overtrue\EasySms\EasySms;
 use App\Http\Requests\Frontend\SmsSendRequest;
+use Illuminate\Support\Facades\Auth;
 
 class SmsController extends FrontendController
 {
@@ -64,25 +65,25 @@ class SmsController extends FrontendController
     protected function sendHandler($mobile, $sessionKey, $templateId)
     {
         $code = mt_rand(1000, 9999);
-//        $code = 1234;
+        //$code = 1234;
         session([$sessionKey => $code]);
         $config = config('sms_new');
 
         $easySms = new EasySms($config);
         $data = [
-//            'content'  => '您的验证码为: 6379',
             'template' => 'SMS_24850304',
             'data' => [
                 'verify' => $code,
-                'name' => 'name',
-                'intro' => 'intro'
+                'name' => '用户',
+                'intro' => '呢！'
             ],
         ];
 
         $sendResponse = $easySms->send($mobile, $data);
         // Log
         SmsRecord::createData($mobile, $data, $sendResponse);
-
+	
+	
         return $this->success('验证码发送成功');
     }
 }
