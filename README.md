@@ -23,7 +23,7 @@
 
 | 站点名 | 地址 |
 | --- | --- |
-| [小滕教学](https://58hualong.com) | `https://58hualong.com` |
+| [heart教学](https://58hualong.com) | `https://58hualong.com` |
 | [青萍教育](http://www.qingpingjiaoyu.com/) | `http://www.qingpingjiaoyu.com` |
 
 

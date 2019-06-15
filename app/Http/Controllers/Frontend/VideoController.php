@@ -21,12 +21,11 @@ class VideoController extends FrontendController
 {
     public function index()
     {
-        $videos = $video = Video::with(['course'])
+	$videos = $video = Video::with(['course'])
             ->published()
             ->show()
             ->orderByDesc('published_at')
             ->paginate(16);
-
         return v('frontend.video.index', compact('videos'));
     }
 

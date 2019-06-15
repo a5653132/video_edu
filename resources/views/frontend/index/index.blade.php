@@ -17,7 +17,7 @@
                                 {{--<img src="/frontend/assets/img/avatar/1.jpg">--}}
                             {{--</a>--}}
                         {{--</div>--}}
-                        {{--<h5>小滕</h5>--}}
+                        {{--<h5>heart</h5>--}}
                         {{--<p><small class="fs-13">PHP全栈开发工程师</small></p>--}}
                         {{--<p class="text-light fs-12 mb-50 fw-500">--}}
                             {{--会一点PHP，会一点GO。知名在线点播系统Education作者，已录制10余套课程。--}}
@@ -49,7 +49,7 @@
                                 {{--做技术必须要保持终生学习的习惯！--}}
                             {{--</p>--}}
                             {{--<p class="text-right">--}}
-                                {{--小滕 于2019年3月29日--}}
+                                {{--heart 于2019年3月29日--}}
                             {{--</p>--}}
                         {{--</div>--}}
                     {{--</div>--}}
@@ -125,7 +125,7 @@
                 {{--<div class="col-md-6 col-lg-4">--}}
                     {{--<div class="card card-inverse" style="background-color: #3b5998">--}}
                         {{--<div class="card-header no-border">--}}
-                            {{--<h5 class="card-title card-title-bold">小滕</h5>--}}
+                            {{--<h5 class="card-title card-title-bold">heart</h5>--}}
                         {{--</div>--}}
                         {{--<blockquote class="blockquote blockquote-inverse no-border card-body m-0">--}}
                             {{--<p>Education 非常棒，我在几分钟之内就搭建好了自己的知识付费应用，感谢 Education </p>--}}
@@ -139,7 +139,7 @@
                 {{--<div class="col-md-6 col-lg-4">--}}
                     {{--<div class="card card-inverse" style="background-color: #3b5998">--}}
                         {{--<div class="card-header no-border">--}}
-                            {{--<h5 class="card-title card-title-bold">小滕</h5>--}}
+                            {{--<h5 class="card-title card-title-bold">heart</h5>--}}
                         {{--</div>--}}
                         {{--<blockquote class="blockquote blockquote-inverse no-border card-body m-0">--}}
                             {{--<p>Education 非常棒，我在几分钟之内就搭建好了自己的知识付费应用，感谢 Education </p>--}}
@@ -153,7 +153,7 @@
                 {{--<div class="col-md-6 col-lg-4">--}}
                     {{--<div class="card card-inverse" style="background-color: #3b5998">--}}
                         {{--<div class="card-header no-border">--}}
-                            {{--<h5 class="card-title card-title-bold">小滕</h5>--}}
+                            {{--<h5 class="card-title card-title-bold">heart</h5>--}}
                         {{--</div>--}}
                         {{--<blockquote class="blockquote blockquote-inverse no-border card-body m-0">--}}
                             {{--<p>Education 非常棒，我在几分钟之内就搭建好了自己的知识付费应用，感谢 Education </p>--}}

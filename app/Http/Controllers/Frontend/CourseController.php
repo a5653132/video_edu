@@ -33,7 +33,7 @@ class CourseController extends FrontendController
 
     public function show($id, $slug)
     {
-        $course = Course::with(['comments', 'user', 'comments.user'])
+     $course = Course::with(['comments', 'user', 'comments.user'])
             ->show()
             ->published()
             ->whereId($id)
@@ -43,7 +43,6 @@ class CourseController extends FrontendController
         $keywords = $course->keywords;
         $description = $course->description;
         $comments = $course->comments()->orderByDesc('created_at')->get();
-
         return v('frontend.course.show', compact(
             'course',
             'title',

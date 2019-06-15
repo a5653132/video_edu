@@ -26,7 +26,7 @@ Route::get('/login/{app}/callback', 'Auth\LoginController@handleProviderCallback
 
 Route::get('/courses', 'Frontend\CourseController@index')->name('courses');
 Route::get('/novels', 'Frontend\NovelController@index')->name('novels');
-Route::get('/videos', 'Frontend\VideoController@index')->name('videos');
+Route::get('/videos_new', 'Frontend\VideoController@index')->name('videos');
 Route::get('/novel_content', 'Frontend\NovelContentController@index')->name('novel_content');
 Route::get('/course/{id}/{slug}', 'Frontend\CourseController@show')->name('course.show');
 Route::get('/novel/{id}/{slug}', 'Frontend\NovelController@show')->name('novel.show');

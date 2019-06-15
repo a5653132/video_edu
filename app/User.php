@@ -437,6 +437,10 @@ class User extends Authenticatable
                         $course = Course::find($goodsItem->goods_id);
                         $this->joinACourse($course);
                         break;
+                    case OrderGoods::GOODS_TYPE_BOOK:
+                        $course = Novel::find($goodsItem->goods_id);
+                        $this->joinANovel($course);
+                        break;
                     case OrderGoods::GOODS_TYPE_VIDEO:
                         $video = Video::find($goodsItem->goods_id);
                         $this->buyAVideo($video);

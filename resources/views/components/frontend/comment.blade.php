@@ -3,7 +3,7 @@
         <div class="col-sm-12">
             <div class="alert alert-primary">
                 <p class="no-padding no-margin">1.支持Markdown语法</p>
-                <p class="no-padding no-margin">2.支持 @ 某个人，格式：<code>@昵称+一个空格</code>，如：<code>@小滕 </code></p>
+                <p class="no-padding no-margin">2.支持 @ 某个人，格式：<code>@昵称+一个空格</code>，如：<code>@heart </code></p>
                 <p class="no-padding no-margin">3.支持拖拽图片到评论框上传</p>
                 <p class="no-padding no-margin">4.支持emoji表情</p>
             </div>
@@ -16,7 +16,7 @@
         </div>
         <div class="col-sm-12 comment-box">
             @foreach($comments as $comment)
-            <div class="card">
+ <div class="card">
                 <div class="card-body">
                     <div class="media bb-1 border-fade">
                         <img class="avatar avatar-lg" src="{{$comment->user->avatar}}">
